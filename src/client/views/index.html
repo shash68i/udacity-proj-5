@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tourism</title>
+</head>
+<body>
+
+    <div class="page-container">
+        <div class="home">
+            <div class="container">
+                <header class="m-btm-4">
+                    <div class="logo">EarthPix <span class="orange">.com</span></div>
+                </header>
+        
+                <form class="form">
+                    <label for="location" class="label">Destination
+                        <input type="text" class="form__input m-top-1 " id="location" value="" placeholder="Try London, UK">
+                    </label>
+        
+                    <label for="start-date" class="label">Depart
+                        <input type="date" class="form__input m-top-1" id="start-date" value="">
+                    </label>
+
+                    <label for="hotel" class="label">Hotel Details
+                        <input type="text" class="form__input m-top-1 m-btm-1" id="hotel" value="" placeholder="Enter your Hotel details">
+                    </label>
+        
+                    <label for="Flight" class="label">Flight Details
+                        <input type="text" class="form__input m-top-1 m-btm-1" id="flight" value="" placeholder="Enter your Flight details">
+                    </label>
+
+                    <button id="submit" class="btn__submit">Submit</button>
+                </form>   
+            </div>
+        </div>
+            
+        <div class="cards" id="section__trips">
+            <h1 class="cards__heading">Trip Results</h1>
+            <div class="card">
+                <div class="card__image"><img id="location-pic" src="" alt="Location pic"></div>
+                <div class="card__content">
+                    <h3 class="card__heading">My trip to <span class="place"></span></h3>
+                    <h3 class="card__heading m-btm-2" id="get-trip-length"></h3>
+                    <button class="btn m-btm-1 btn--save" id="save-btn">save trip</button>
+    
+                    <h2 class="location m-top-2 place"></h2>
+                    <h3 class="details m-top-2">Average Weather Details: <br> <span id="climate"></span> </h3>
+                    <h3 class="details m-top-2" id="hotel-details">Hotel Details: <br> </h3>
+                    <h3 class="details m-top-2" id="flight-details">Flight Details: <br> </h3>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+</html>
