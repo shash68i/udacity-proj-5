@@ -8,5 +8,3 @@ Features I have added to extend the project:
 
 1. Added the functionality of displaying Hotel & Flight details.
 2. Added Save button.
-
-Scripts
